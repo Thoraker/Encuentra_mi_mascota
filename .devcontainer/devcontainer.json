@@ -6,13 +6,15 @@
   "remoteUser": "root",
   "forwardPorts": [3000],
   "postCreateCommand": "corepack enable && ([ -f package.json ] && pnpm install || true )",
-   "customizations": {
+  "shutdownAction": "stopCompose",
+  "customizations": {
     "vscode": {
       "extensions": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "bradlc.vscode-tailwindcss",
-        "cweijan.vscode-mysql-client2"
+        "cweijan.vscode-mysql-client2",
+        "evondev.indent-rainbow-palettes"
       ]
     }
   }

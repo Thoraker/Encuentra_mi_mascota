@@ -14,8 +14,30 @@ export default function Home() {
             </code>{" "}
             file.
           </h1>
+
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum commodi
+            omnis, eos sed doloribus laboriosam perferendis, cupiditate odit
+            molestias eius quos inventore ratione nostrum possimus eum error
+            atque. Rem, reiciendis! Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Magnam nisi, cum molestias blanditiis provident
+            excepturi praesentium id fugiat reprehenderit recusandae laudantium
+            quis saepe delectus earum, tempora, aut debitis. Numquam, culpa.{" "}
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
+            ipsam ex explicabo beatae repellat. Magnam molestias aliquid iusto
+            corporis odio harum facilis eius minus ducimus. Totam iste nemo
+            labore vero. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Commodi, aperiam? Tempore placeat, itaque architecto nisi
+            cumque nulla laboriosam et nesciunt qui magnam illum quam corporis
+            porro alias eius ratione esse. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Veniam, excepturi cumque tempore
+            laboriosam unde dignissimos quidem, exercitationem iusto aspernatur
+            facilis nulla ipsa quibusdam. Debitis eos cumque iusto a dolorum.
+            Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Magni ad quisquam accusantium. Optio est ipsam, quasi similique
+            officia vero voluptas hic, nisi ut, cum animi quae odio incidunt.
+            Eos, reprehenderit.{" "}
             <a
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
               className="font-medium text-zinc-950 dark:text-zinc-50"
@@ -43,6 +65,7 @@ export default function Home() {
               className="dark:invert h-3.5 w-4"
               src="/vercel.svg"
               alt="Vercel logomark"
+              loading="eager"
               width={16}
               height={14}
             />

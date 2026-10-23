@@ -1,11 +1,74 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { cn } from "@/utils/utils";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-export default function Button({ children }: { children: ReactNode }) {
+const styleClasses = {
+  outline: "btn-outline",
+  dash: "btn-dash",
+  soft: "btn-soft",
+  ghost: "btn-ghost",
+  link: "btn-link",
+  disabled: "btn-disabled",
+} as const;
+
+const colorClasses = {
+  neutral: "btn-neutral",
+  primary: "btn-primary",
+  secondary: "btn-secondary",
+  accent: "btn-accent",
+  info: "btn-info",
+  success: "btn-success",
+  warning: "btn-warning",
+  error: "btn-error",
+} as const;
+
+const sizeClasses = {
+  xs: "btn-xs",
+  sm: "btn-sm",
+  md: "btn-md",
+  lg: "btn-lg",
+  xl: "btn-xl",
+} as const;
+
+const modifierClasses = {
+  wide: "btn-wide",
+  block: "btn-block",
+  square: "btn-square",
+  circle: "btn-circle",
+} as const;
+
+type ButtonProps = {
+  children: ReactNode;
+  style?: keyof typeof styleClasses;
+  color?: keyof typeof colorClasses;
+  size?: keyof typeof sizeClasses;
+  modifier?: keyof typeof modifierClasses;
+  className?: string;
+} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "style" | "color">;
+
+export default function Button({
+  children,
+  style,
+  color = "primary",
+  size,
+  modifier,
+  className,
+  ...props
+}: ButtonProps) {
   return (
-    <div className="navbar-end">
-      <a className="btn">{children}</a>
-    </div>
+    <button
+      className={cn(
+        "btn",
+        colorClasses[color],
+        style && styleClasses[style],
+        size && sizeClasses[size],
+        modifier && modifierClasses[modifier],
+        className,
+      )}
+      {...props}
+    >
+      {children}
+    </button>
   );
 }
